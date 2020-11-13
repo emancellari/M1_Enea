@@ -1,0 +1,60 @@
+#include <iostream>
+#include<fstream>
+using namespace std;
+
+// Question: Write a program that is going to get n rows of m numbers. Then, the program will subtract the smallest value of every row from the row elements.
+
+ifstream fin("input.txt");
+
+
+/*1. Create needed functions
+a.Display the elements
+void Display (int lst[],int size, int min)
+b.getrow from the matrix
+int getrow(int lst[],int size)
+return the min element
+*/
+
+void Display (int lst[],int size, int min);
+
+int getrow(int lst[],int size);
+
+
+int main(){
+  int n,m, min;
+
+  fin>>n>>m;
+
+int lst[m];
+
+for(int j=0; j<n; j++)
+{
+  min=getrow(lst, m); // comes the reuslt from getrow
+  Display(lst,m,min);
+
+}
+
+
+  return 0;
+}
+
+int getrow(int lst[],int size){
+fin>>lst[0];
+int result = lst[0];
+
+for(int i=1;i<size;i++){
+  fin>>lst[i];
+  if(result > lst[i])
+    result= lst[i];
+}
+ return result;
+}
+
+void Display (int lst[],int size, int min){
+for(int i=0;i<size;i++){
+  cout<<lst[i]-min<<"   ";
+}
+cout<<endl;
+}
+
+

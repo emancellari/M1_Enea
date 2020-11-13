@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+void display (char ='*' , int = 4);
+
+
+int main(){
+int count;
+cin>>count;
+
+// invoke the function without param
+display();
+
+//invoke the function with one param
+display('@');
+
+
+// invoke the function with 2 param
+
+display('#', count);
+return 0;
+}
+
+void display (char ch , int count){
+
+for(int i=1;i<=count;i++){
+  cout<<ch;
+}
+cout<<endl;
+}
