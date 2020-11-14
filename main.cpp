@@ -10,6 +10,7 @@ int main(){
  cout<< sum(1,2)<<endl;
  cout<< sum(1,2,3)<<endl;
  cout<< sum(1,2,4,5)<<endl;
+ cout<<sum(1,4)<<endl;
 
   return 0;
 }
